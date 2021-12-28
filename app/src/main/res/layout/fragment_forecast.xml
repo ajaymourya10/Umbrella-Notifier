@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ForecastFragment"
+    android:padding="16dp">
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/main_info"
+    android:orientation="vertical"
+    android:layout_centerHorizontal="true"
+    android:gravity="center_horizontal">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5 DAYS WEATHER FORECAST"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:textColor="@color/colorPrimary"/>
+
+    <TextView
+        android:id="@+id/txt_city_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weather in London,GB"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimary"/>
+
+    <TextView
+        android:id="@+id/txt_geo_coord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="[35.42]"
+        android:textStyle="italic"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimary"/>
+
+</LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_info"
+        android:layout_marginTop="20dp"
+        android:id="@+id/recycler_forecast">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose Time"
+        android:layout_below="@id/recycler_forecast"
+        android:layout_marginTop="100dp"
+        android:drawableLeft="@drawable/ic_ime"
+        android:background="@color/colorAccent"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/Timepicker"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="100dp"
+        android:text="Alarm"
+        android:layout_toRightOf="@+id/Timepicker"
+        android:layout_below="@id/recycler_forecast"
+        android:background="#70BA7E"
+        android:id="@+id/alarm"/>
+
+
+
+
+</RelativeLayout>
